@@ -1,38 +1,62 @@
-<div class="title-page">
-  <h1>The "one and only" Noodiscord Spirit Website</h1>
+<div class="page">
 
+  <div class="title-page">
+    <h1>The "one and only" Noodiscord Spirit Website</h1>
+
+  </div>
+
+  <div class="cards">
+    <mat-card class="store-card">
+      <mat-card-header>
+        <mat-card-title class="top">Noodiscord Spirit Store!</mat-card-title>
+        <mat-card-subtitle>A one-stop-shop for all things Noodle Man Spirit</mat-card-subtitle>
+
+      </mat-card-header>
+      <img mat-card-image src="/assets/img/noody1.png">
+      <mat-card-content>
+        <p>Been earning your points in noodiscord? Put 'em to good use here and check out all of the
+          cool prizes waiting for you inside
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button
+          (click)="toShop()">Shop</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="store-card">
+      <mat-card-header>
+        <mat-card-title>The Bonus Zone</mat-card-title>
+        <mat-card-subtitle>Been an extra cool noodle? Head on over to the bonus zone</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/assets/img/noody2.png" alt="">
+      <mat-card-content>Ever thought that the experience of Noodiscord was fun but it could be more? This is the place for you!
+         In the bonus zone you will find all kinds of fun surprises that defy your wildest dreams. The best part? You don't need to sub
+         on youtube or twitch and wait hopelessly for more noodle man content!
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button
+        (click)="toBonus()">Enter the bonus zone!</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="store-card">
+      <mat-card-header>
+        <mat-card-title>Extreme Color Shop</mat-card-title>
+        <mat-card-subtitle>Haven't picked a color in Noodiscord for your avatar yet? This is the place for you</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="/assets/img/noody3.png" alt="">
+      <mat-card-content>
+        <p>You may or may not have noticed, but some of the coolest members of Noodiscord have been changing their profile pics
+          in the server to solid colors to show their flair. Not only is this a really cool choice, but it is also highly recommended by the
+          higher ups in the server. If you haven't picked yours yet, you will definitely want to check this out.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button
+        (click)="toBonus()">Shop Colors</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
 </div>
-
-<mat-card class="store-card">
-  <mat-card-header>
-    <mat-card-title class="top">Welcome to the Noodiscord Spirit Store!</mat-card-title>
-    <mat-card-subtitle>A one-stop-shop for all things Noodle Man Spirit</mat-card-subtitle>
-
-  </mat-card-header>
-  <img mat-card-image src="/assets/img/noody1.png">
-  <mat-card-content>
-    <p>Been earing your points in noodiscord? Put 'em to good use here and check out all of the
-      cool prizes waiting for you inside
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button
-      (click)="toShop()">Shop</button>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card class="store-card">
-  <mat-card-header>
-    <mat-card-title>The Bonus Zone!</mat-card-title>
-    <mat-card-subtitle>Been an extra cool noodle? Head on over to the bonus zone</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="/assets/img/noody2.png" alt="">
-  <mat-card-content>Ever thought that the experience of Noodiscord was fun but it could be more? This is the place for you!
-     In the bonus zone you will find all kinds of fun surprises that defy your wildest dreams. The best part? You don't need to sub
-     on youtube or twitch and wait hopelessly for more noodle man content!
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button
-    (click)="toBonus()">Enter the bonus zone!</button>
-  </mat-card-actions>
-</mat-card>

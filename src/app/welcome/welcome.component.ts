@@ -18,6 +18,9 @@ export class WelcomeComponent implements OnInit {
     this.router.navigate(["/bonus"]);
   }
 
+  toColor(): void {
+    this.router.navigate(['/color']);
+  }
   ngOnInit(): void {
   }
 

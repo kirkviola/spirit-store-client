@@ -8,7 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ShopComponent } from './shop/shop.component';
-import { BonusComponent } from './bonus/bonus.component'
+import { BonusComponent } from './bonus/bonus.component';
+import { ColorComponent } from './color/color.component'
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { BonusComponent } from './bonus/bonus.component'
     AppComponent,
     WelcomeComponent,
     ShopComponent,
-    BonusComponent
+    BonusComponent,
+    ColorComponent
   ],
   imports: [
     BrowserModule,
