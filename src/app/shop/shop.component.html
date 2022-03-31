@@ -1,9 +1,20 @@
-<div class="set-nuggets"
-  *ngIf="notLogged">
-  <mat-form-field>Fill in the following to continue</mat-form-field>
-  <input matInput type="number"
-          min="0" max="100" [(ngModel)]="nuggets">
-</div>
+<mat-card class="log-in" [hidden]="logged">
+  <form>
+    <h3>Enter the following information to continue to the shop</h3>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput [(ngModel)]="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Noodle Nuggets (use the honor system pls)</mat-label>
+      <input type="number" value="0" matInput min="0" max="100" [(ngModel)]="nuggets">
+    </mat-form-field>
+    <br>
+    <button mat-button (click)="onSubmit()">Enter Shop</button>
+  </form>
+
+</mat-card>
 
 <div class="shop"
   *ngIf="logged">

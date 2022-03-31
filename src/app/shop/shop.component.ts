@@ -10,15 +10,16 @@ import { SystemService } from '../system.service';
 export class ShopComponent implements OnInit {
 
   logged: boolean = false;
-  notLogged: boolean = true;
   nuggets: number = 0;
+  name: string = "";
 
   constructor(private sysSvc: SystemService) {}
   onSubmit(): void {
     this.logged = true;
-    this.notLogged = false;
     this.sysSvc.user.nuggetsSet = true;
     this.sysSvc.user.noodleNuggets = this.nuggets;
+    this.sysSvc.user.name = this.name;
+    window.location.reload();
   }
 
   ngOnInit(): void {
