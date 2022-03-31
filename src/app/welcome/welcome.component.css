@@ -1,17 +1,36 @@
-.store-card {
-  max-width: 400px;
-  max-height: min-content;
-  margin: 10px;
-  display: inline-block;
-  text-align: center;
+@media (max-width: 400px) {
+  .store-card {
+    max-width: 350px;
+    margin: 5px;
+    text-align: center;
+    display: block;
+  }
+  .cards {
+    display: block;
+  }
+  .title-page {
+    text-align: center;
+    margin: 5px;
+  }
 }
 
-.cards {
-  display: flex;
-  align-items: stretch;
+@media (min-width: 401px){
+  .store-card {
+    max-width: 400px;
+    max-height: min-content;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+  }
 
-}
-.title-page {
-  text-align: left;
-  margin: 10px;
+  .cards {
+    display: flex;
+    align-items: stretch;
+
+  }
+  .title-page {
+    text-align: left;
+    margin: 10px;
+  }
+
 }
