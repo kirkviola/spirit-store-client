@@ -1,0 +1,28 @@
+.card {
+  margin: 5px;
+  padding: 5px;
+  border: silver;
+}
+
+.card-header {
+background-color: plum;
+}
+
+.noody-pics {
+  max-width: 75%;
+  max-height: fit-content;
+}
+
+div.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 10%;
+  padding: 5px;
+  border: solid 1px black;
+  border-radius: 25px;
+}
+.caption {
+  display: block;
+  text-align: center;
+}
