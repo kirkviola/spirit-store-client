@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BonusComponent } from './bonus/bonus.component';
+import { ShopComponent } from './shop/shop.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "welcome", pathMatch: "full" },
 
-  { path: "welcome", component: WelcomeComponent }
+  { path: "welcome", component: WelcomeComponent },
+
+  { path: "shop", component: ShopComponent},
+  { path: "bonus", component: BonusComponent },
+
+  { path: '**', component: WelcomeComponent}
 ];
 
 @NgModule({
