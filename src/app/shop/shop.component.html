@@ -1,1 +1,11 @@
-<p>shop works!</p>
+<div class="set-nuggets"
+  *ngIf="notLogged">
+  <mat-form-field>Fill in the following to continue</mat-form-field>
+  <input matInput type="number"
+          min="0" max="100" [(ngModel)]="nuggets">
+</div>
+
+<div class="shop"
+  *ngIf="logged">
+
+</div>

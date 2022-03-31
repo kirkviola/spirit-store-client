@@ -1,16 +1,20 @@
 @media (max-width: 400px) {
   .store-card {
-    max-width: 350px;
-    margin: 5px;
+    max-width: 250px;
+    margin: 10%;
     text-align: center;
     display: block;
   }
   .cards {
     display: block;
+
   }
   .title-page {
     text-align: center;
     margin: 5px;
+  }
+  h1 {
+    font-size: medium;
   }
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from '../system.service';
 
 @Component({
   selector: 'app-welcome',
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private sysSvc: SystemService) { }
 
   toShop(): void {
     this.router.navigate(["/shop"]);
