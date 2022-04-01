@@ -36,5 +36,7 @@
     text-align: center;
     margin: 10px;
   }
-
+  #left-card {
+    margin-left: 100px;
+  }
 }
