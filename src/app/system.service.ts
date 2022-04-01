@@ -7,7 +7,7 @@ import { User } from 'src/app/users/user.class';
 export class SystemService {
 
   user!: User
-  baseUrl: string = 'http://localhost:5089'
+  baseUrl: string = 'http://localhost:5089/api'
   constructor() {
    }
 

@@ -15,6 +15,7 @@ import { BonusComponent } from './bonus/bonus.component';
 import { ColorComponent } from './color/color.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { LoginGuard } from './login.guard';
 
 
 @NgModule({

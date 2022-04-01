@@ -5,6 +5,7 @@ import { ColorComponent } from './color/color.component';
 import { LoginComponent } from './login/login.component';
 import { ShopComponent } from './shop/shop.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { LoginGuard } from './login.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: "welcome", pathMatch: "full" },
@@ -12,7 +13,7 @@ const routes: Routes = [
   { path: "welcome", component: WelcomeComponent },
 
   { path: "login", component: LoginComponent },
-  { path: "shop", component: ShopComponent},
+  { path: "shop", component: ShopComponent },
   { path: "bonus", component: BonusComponent },
   { path: "color", component: ColorComponent},
 

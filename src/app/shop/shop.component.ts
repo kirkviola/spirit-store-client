@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRouteSnapshot, Route, Router, RouterStateSnapshot } from '@angular/router';
+import { LoginGuard } from '../login.guard';
 import { SystemService } from '../system.service';
 
 @Component({
@@ -8,18 +10,14 @@ import { SystemService } from '../system.service';
 })
 export class ShopComponent implements OnInit {
 
-  logged!: boolean;
-  nuggets: number = 0;
-  name: string = "";
 
-  constructor(private sysSvc: SystemService) {}
-  onSubmit(): void {
-    this.logged = true;
-    window.location.reload();
-  }
+  constructor(private sysSvc: SystemService,
+              private router: Router) {}
+
 
   ngOnInit(): void {
-    this.logged = this.sysSvc.isLoggedIn();
+    if (!this.sysSvc.isLoggedIn()){
+      this.router.navigate(['/login']);
+    }
   }
-
 }

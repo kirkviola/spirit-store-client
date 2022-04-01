@@ -9,7 +9,7 @@ import { User } from './user.class';
 })
 export class UserService {
 
-  baseUrl: string = this.sysSvc.baseUrl + '/users/';
+  baseUrl: string = this.sysSvc.baseUrl + '/users';
   constructor(private http: HttpClient,
               private sysSvc: SystemService) { }
 
@@ -21,6 +21,9 @@ export class UserService {
       return this.http.get(`${this.baseUrl}/${id}`) as Observable<User>;
     }
 
+    getByName(name: string): Observable<User> {
+      return this.http.get(`${this.baseUrl}/${name}`) as Observable<User>;
+    }
     create(user: User): Observable<User> {
       return this.http.post(`${this.baseUrl}`, user) as Observable<User>;
     }
