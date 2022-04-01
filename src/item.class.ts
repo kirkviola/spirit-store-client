@@ -1,4 +1,4 @@
-import { User } from "./users/user.class";
+import { User } from "./app/users/user.class";
 
 export class Item {
   id: number;

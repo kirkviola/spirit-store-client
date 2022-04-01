@@ -1,0 +1,15 @@
+<mat-card class="user-list">
+  <mat-card-title>Enter the shop</mat-card-title>
+  <mat-card-subtitle>Find your name below to enter</mat-card-subtitle>
+  <mat-card-actions>
+    <mat-form-field appearance="fill">
+      <mat-label>Users</mat-label>
+      <mat-select>Users
+        <mat-option *ngFor="let user of users" value="user.name">{{user.name}}</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <button mat-button>Log In</button>
+  </mat-card-actions>
+</mat-card>

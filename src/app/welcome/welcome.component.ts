@@ -13,7 +13,8 @@ export class WelcomeComponent implements OnInit {
               private sysSvc: SystemService) { }
 
   toShop(): void {
-    this.router.navigate(["/shop"]);
+     let path: string = this.sysSvc.isLoggedIn() ? '/shop' : '/login';
+     this.router.navigate([`${path}`])
   }
 
   toBonus(): void {

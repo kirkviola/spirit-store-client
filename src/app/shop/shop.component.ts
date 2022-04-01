@@ -15,18 +15,11 @@ export class ShopComponent implements OnInit {
   constructor(private sysSvc: SystemService) {}
   onSubmit(): void {
     this.logged = true;
-    this.sysSvc.name = this.name;
-    this.sysSvc.total = this.nuggets;
-    this.sysSvc.logged = this.logged;
     window.location.reload();
   }
 
   ngOnInit(): void {
-    this.logged = this.sysSvc.logged;
-    if (this.sysSvc.logged === null ||
-        this.sysSvc.logged === undefined){
-          this.logged = false;
-        }
+    this.logged = this.sysSvc.isLoggedIn();
   }
 
 }
