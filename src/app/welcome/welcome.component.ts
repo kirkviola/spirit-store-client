@@ -9,6 +9,7 @@ import { SystemService } from '../system.service';
 })
 export class WelcomeComponent implements OnInit {
 
+  admin: boolean = false;
   constructor(private router: Router,
               private sysSvc: SystemService) { }
 
@@ -25,6 +26,7 @@ export class WelcomeComponent implements OnInit {
     this.router.navigate(['/color']);
   }
   ngOnInit(): void {
+    this.admin = this.sysSvc.user.isAdmin ? true : false;
   }
 
 }

@@ -1,0 +1,27 @@
+@media (max-width: 400px){
+  .color {
+    max-width: 250px;
+    display: block;
+    margin: 10px;
+  }
+  .back {
+    margin: 4px;
+  }
+}
+
+@media (min-width: 401px){
+  .color {
+    max-width: 300px;
+    display: inline-block;
+    margin: 10px;
+  }
+  .back {
+    margin: 10px;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: medium;
+  display: block;
+}

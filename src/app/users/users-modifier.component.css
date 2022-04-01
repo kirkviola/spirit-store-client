@@ -1,0 +1,11 @@
+@media (max-width: 400px){
+  .back {
+    margin: 4px;
+  }
+}
+
+@media (min-width: 401px){
+  .back {
+    margin: 10px;
+  }
+}
