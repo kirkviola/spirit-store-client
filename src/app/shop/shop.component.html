@@ -1,22 +1,27 @@
-<mat-card class="log-in" [hidden]="logged">
-  <form>
-    <h3>Enter the following information to continue to the shop</h3>
-    <mat-form-field appearance="fill">
-      <mat-label>Name</mat-label>
-      <input type="text" matInput [(ngModel)]="name">
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Noodle Nuggets (use the honor system pls)</mat-label>
-      <input type="number" value="0" matInput min="0" max="100" [(ngModel)]="nuggets">
-    </mat-form-field>
-    <br>
-    <button mat-button (click)="onSubmit()">Enter Shop</button>
-  </form>
+<div *ngIf="logged===false">
+  <mat-card class="log-in">
+    <form>
+      <h3>Enter the following information to continue to the shop</h3>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input type="text" matInput [(ngModel)]="name">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Noodle Nuggets (use the honor system pls)</mat-label>
+        <input type="number" value="0" matInput min="0" max="100" [(ngModel)]="nuggets">
+      </mat-form-field>
+      <br>
+      <button mat-button (click)="onSubmit()">Enter Shop</button>
+      <button mat-button routerLink="/welcome">Go Back</button>
+    </form>
 
-</mat-card>
+  </mat-card>
+
+</div>
 
 <div class="shop"
   *ngIf="logged">
-
+  <p>You are logged in!</p>
 </div>
+<p>{{logged}}</p>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { SystemService } from '../system.service';
 
 @Component({
@@ -9,22 +8,25 @@ import { SystemService } from '../system.service';
 })
 export class ShopComponent implements OnInit {
 
-  logged: boolean = false;
+  logged!: boolean;
   nuggets: number = 0;
   name: string = "";
 
   constructor(private sysSvc: SystemService) {}
   onSubmit(): void {
     this.logged = true;
-    this.sysSvc.user.nuggetsSet = true;
-    this.sysSvc.user.noodleNuggets = this.nuggets;
-    this.sysSvc.user.name = this.name;
+    this.sysSvc.name = this.name;
+    this.sysSvc.total = this.nuggets;
+    this.sysSvc.logged = this.logged;
     window.location.reload();
   }
 
   ngOnInit(): void {
-    this.logged = this.sysSvc.user.nuggetsSet;
-
+    this.logged = this.sysSvc.logged;
+    if (this.sysSvc.logged === null ||
+        this.sysSvc.logged === undefined){
+          this.logged = false;
+        }
   }
 
 }

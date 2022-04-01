@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
-import { User } from 'src/user';
+import { User } from 'src/users/user.class';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SystemService {
 
-  user!: User
+  name!: string;
+  total!: number;
+  logged!: boolean;
 
-  constructor() { }
+  constructor() {
+
+   }
 
 }

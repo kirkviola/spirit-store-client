@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ShopComponent } from './shop/shop.component';
 import { BonusComponent } from './bonus/bonus.component';
 import { ColorComponent } from './color/color.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ColorComponent } from './color/color.component';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
