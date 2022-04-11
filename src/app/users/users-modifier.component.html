@@ -1,10 +1,21 @@
-<button mat-raised-button color="primary"
+<button mat-flat-button
   routerLink="/welcome" class="back">Go Back</button>
 
-  <!-- Need to complete this with definitions of remaining rows and such -->
-  <table mat-table [dataSource]="users" class="mat-elevation-z8">
+  <!-- Need to complete this with definitions of remaining rows and such-->
+  <table mat-table [dataSource]="users" class="mat-elevation-z8" >
     <ng-container matColumnDef="Name">
       <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let user">{{user.username}}</td>
+      <td mat-cell *matCellDef="let user ">{{user.name}}</td>
     </ng-container>
+
+    <ng-container matColumnDef="Edit">
+      <th mat-header-cell *matHeaderCellDef>Edit</th>
+      <td mat-cell *matCellDef="let user">
+        <button mat-button color="primary" routerLink="/users/edit/{{user.id}}">Edit</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
+

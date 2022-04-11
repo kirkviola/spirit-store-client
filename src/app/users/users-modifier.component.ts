@@ -13,7 +13,10 @@ export class UsersModifierComponent implements OnInit {
   constructor(private sysSvc: SystemService,
               private usrSvc: UserService) { }
 
-  users!: User[]
+  users: User[] = [];
+  displayedColumns: string[] = [
+    "Name", "Edit"
+  ];
 
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();

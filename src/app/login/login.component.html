@@ -1,4 +1,3 @@
-<button class="back" mat-raised-button color="primary"routerLink="/welcome">Go Back</button>
 <mat-card class="user-list">
   <mat-card-title>Enter the shop</mat-card-title>
   <mat-card-subtitle>Find your name below to enter</mat-card-subtitle>
@@ -17,6 +16,7 @@
     </mat-form-field>
     <br>
     <button mat-button (click)="login()">Log In</button>
+    <button class="back" mat-flat-button color="primary"routerLink="/welcome">Go Back</button>
   </mat-card-actions>
   <label *ngIf="passError" class="error">Incorrect password!</label>
 </mat-card>

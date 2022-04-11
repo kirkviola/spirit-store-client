@@ -30,7 +30,7 @@
   .cards {
     display: flex;
     align-items: stretch;
-
+    color: #1D1C1C;
   }
   .title-page {
     text-align: center;

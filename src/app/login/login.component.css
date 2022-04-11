@@ -10,7 +10,8 @@
 
 @media (min-width: 401px){
   .user-list {
-    margin: 20px 50px;
+    margin: 20px 200px;
+    text-align: center;
   }
   .back {
     margin-left: 50px;

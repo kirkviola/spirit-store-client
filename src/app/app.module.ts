@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login.guard';
 import { UsersModifierComponent } from './users/users-modifier.component';
+import { UserEditComponent } from './users/user-edit/user-edit.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { UsersModifierComponent } from './users/users-modifier.component';
     BonusComponent,
     ColorComponent,
     LoginComponent,
-    UsersModifierComponent
+    UsersModifierComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
