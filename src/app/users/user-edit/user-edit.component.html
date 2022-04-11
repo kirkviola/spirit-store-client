@@ -1,1 +1,38 @@
 <button class="mat-flat-button" routerLink="/users">Go Back</button>
+
+<mat-card class="user-edit">
+  <mat-card-title>Edit Details for {{user.name}}</mat-card-title>
+  <mat-card-actions>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>User Id</mat-label>
+        <input matInput [(ngModel)]="user.id" disabled>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>User Name</mat-label>
+        <input matInput [(ngModel)]="user.name">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>User Password</mat-label>
+        <input matInput [(ngModel)]="user.password">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Noodle Nuggets</mat-label>
+        <input matInput [(ngModel)]="user.noodleNuggets">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Admin?</mat-label>
+        <mat-checkbox matInput [(ngModel)]="user.isAdmin"></mat-checkbox>
+      </mat-form-field>
+    </p>
+  </mat-card-actions>
+</mat-card>

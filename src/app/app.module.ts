@@ -7,8 +7,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select'
+import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { ShopComponent } from './shop/shop.component';
@@ -41,6 +42,7 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
     MatInputModule,
     MatSelectModule,
     MatTableModule,
+    MatCheckboxModule,
     FormsModule,
     HttpClientModule
   ],
