@@ -2,10 +2,16 @@
   .back {
     margin: 4px;
   }
+  .user-edit {
+    margin: 4px;
+  }
 }
 
 @media (min-width: 401px){
   .back {
+    margin: 10px;
+  }
+  .user-edit {
     margin: 10px;
   }
 }
