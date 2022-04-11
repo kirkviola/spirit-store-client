@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SystemService } from 'src/app/system.service';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
@@ -17,8 +17,17 @@ export class UserEditComponent implements OnInit {
 
   constructor(private userSvc: UserService,
               private route: ActivatedRoute,
-              private sysSvc: SystemService) { }
+              private sysSvc: SystemService,
+              private router: Router) { }
 
+
+  save(): void {
+    this.userSvc.update(this.user).subscribe({
+      next: res => { console.debug(res, 'user updated');
+                     this.router.navigate(["/users"]); },
+      error: err => { console.error(err); }
+    });
+  }
 
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();

@@ -1,4 +1,6 @@
-<button class="mat-flat-button" routerLink="/users">Go Back</button>
+<div class="back">
+  <button class="mat-flat-button" routerLink="/users">Go Back</button>
+</div>
 
 <mat-card class="user-edit">
   <mat-card-title>Edit Details for {{user.name}}</mat-card-title>
@@ -25,14 +27,17 @@
     <p>
       <mat-form-field appearance="fill">
         <mat-label>Noodle Nuggets</mat-label>
-        <input matInput [(ngModel)]="user.noodleNuggets">
+        <input matInput type="number" min="0" max="1000" [(ngModel)]="user.noodleNuggets">
       </mat-form-field>
     </p>
-    <p>
-      <mat-form-field appearance="fill">
-        <mat-label>Admin?</mat-label>
-        <mat-checkbox matInput [(ngModel)]="user.isAdmin"></mat-checkbox>
-      </mat-form-field>
-    </p>
+
+      <p>
+          <mat-checkbox matInput [(ngModel)]="user.isAdmin"
+                        color="primary">Admin?</mat-checkbox>
+      </p>
+
+
+    <button mat-button color="primary" (click)="save()">Save</button>
+    <button mat-button routerLink="/users">Go Back</button>
   </mat-card-actions>
 </mat-card>
