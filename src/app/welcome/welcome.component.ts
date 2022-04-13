@@ -26,7 +26,8 @@ export class WelcomeComponent implements OnInit {
     this.router.navigate(['/color']);
   }
   ngOnInit(): void {
-    this.admin = this.sysSvc.user.isAdmin ? true : false;
+    this.admin = this.sysSvc.user === undefined ||
+                !this.sysSvc.user.isAdmin ? false : true;
   }
 
 }
