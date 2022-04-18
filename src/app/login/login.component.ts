@@ -26,10 +26,12 @@ export class LoginComponent implements OnInit {
       next: res => {
         this.currentUser = res;
         console.debug(res);
+
         this.sysSvc.user = this.currentUser;
+        
         if (this.password === this.currentUser.password){
           this.authenticated = true;
-          console.debug(this.password, this.currentUser.password);
+          console.debug(this.password, this.currentUser.password);          
         }
         if (!this.authenticated){
           console.debug(this.password, this.currentUser.password);
