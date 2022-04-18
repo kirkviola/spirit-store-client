@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRouteSnapshot, Route, Router, RouterStateSnapshot } from '@angular/router';
 import { LoginGuard } from '../login.guard';
 import { SystemService } from '../system.service';
+import { User } from '../users/user.class';
 
 @Component({
   selector: 'app-shop',
@@ -10,7 +11,8 @@ import { SystemService } from '../system.service';
 })
 export class ShopComponent implements OnInit {
 
-
+  user!: User
+  
   constructor(private sysSvc: SystemService,
               private router: Router) {}
 
@@ -18,6 +20,8 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
     if (!this.sysSvc.isLoggedIn()){
       this.router.navigate(['/login']);
+      this.user = this.sysSvc.user;
+
     }
   }
 }
