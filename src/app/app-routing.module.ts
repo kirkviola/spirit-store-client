@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginGuard } from './login.guard';
 import { UsersModifierComponent } from './users/users-modifier.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { InventoryComponent } from './shop/inventory/inventory.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "welcome", pathMatch: "full" },
@@ -16,6 +17,7 @@ const routes: Routes = [
 
   { path: "login", component: LoginComponent },
   { path: "shop", component: ShopComponent },
+  { path: "shop/inventory", component: InventoryComponent },
   { path: "bonus", component: BonusComponent },
   { path: "color", component: ColorComponent},
   { path: "users", component: UsersModifierComponent},

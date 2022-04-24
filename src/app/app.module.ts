@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login.guard';
 import { UsersModifierComponent } from './users/users-modifier.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { InventoryComponent } from './shop/inventory/inventory.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
     ColorComponent,
     LoginComponent,
     UsersModifierComponent,
-    UserEditComponent
+    UserEditComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,
