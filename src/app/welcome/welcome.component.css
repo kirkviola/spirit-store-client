@@ -1,7 +1,7 @@
 @media (max-width: 400px) {
   .store-card {
     max-width: 250px;
-    margin: 10%;
+    margin: 10px 70px;
     text-align: center;
     display: block;
   }

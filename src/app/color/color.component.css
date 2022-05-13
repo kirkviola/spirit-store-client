@@ -2,7 +2,7 @@
   .color {
     max-width: 250px;
     display: block;
-    margin: 10px;
+    margin: 10px 75px;
   }
   .back {
     margin: 4px;
@@ -13,7 +13,9 @@
   .color {
     max-width: 300px;
     display: inline-block;
-    margin: 10px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .back {
     margin: 10px;
